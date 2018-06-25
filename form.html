@@ -1,0 +1,32 @@
+<html>
+<body>
+  <form action="http://localhost/login.php">
+  <p>아이디: <input type="text" name="id" value="default value"></p>
+  <p>비밀번호: <input type="password" name="pwd" value="default value"></p>
+  <p>주소: <input type="text" name="address"></p>
+  <p>textarea:
+    <textarea cols="50" rows="2">defaultvalue</textarea></p>
+  <input type="submit">
+</form>
+
+<!--선택하기-->
+<form action="http://localhost/color.php">
+  <h1>color</h1>
+  <select name="color">
+    <option value="red">red</option>
+    <option value="black">black</option>
+    <option value="blue">blue</option>
+  </select>
+
+<!--레이블-->
+<label>
+  <input type="checkbox" name="color" value="red">red
+</label>
+<label for="color_blue">
+  <input id ="color_blue" type="checkbox" name="color" value="blue">blue
+</label>
+
+  <input type="submit">
+
+</body>
+</html>
