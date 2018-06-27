@@ -11,7 +11,7 @@
 <!-- #이면 id(식별자)를 가리킴: 중복되지 않는 값-->
 
 <!-- 우선순위
-id - class - 나머지 태그들 -->
+id > class > 나머지 태그들 -->
 <style>
 .js{
   font-weight: bold;
@@ -29,9 +29,10 @@ span{
   <h1><a href="index.html">WEB</a></h1> 
 
   <input id="night_day" type="button" value="night" onclick="
-  nightDayHandler(this);
+  nightDayHandler(this); 
   ">
-
+  <!-- 여기서 this는 value값 전달됨 -->
+  
   <ol>
     <li><a href="1.html"> html</a></li>
     <li><a href="2.html"> CSS</a></li>
