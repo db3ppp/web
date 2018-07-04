@@ -26,11 +26,20 @@
      {{grocery.item}} {{$index}}
      </li>
    </ol>
-   <!-- ng-if= $first
+   <!-- ng-if= $first :첫번째만 true
                $last
                $middle
                $even
                $odd  -->
+<table>
+  <tr ng-repeat-start="grocery in groceries">
+    <td>{{grocery.item}}</td>
+  </tr>
+  <tr ng-repeat-end>
+    <td>{{grocery.purchased}}</td>
+  </tr>
+</table>
+
   </div>
 
 </body>
