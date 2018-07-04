@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src = "examp.js"></script>
+</head>
+
+<body ng-app="app">
+  <div id="groceryList" ng-controller="gListCtrl">
+    <!-- Expression에 직접 propery입력하여 출력 -->
+   <h3 class="ListTitle"> {{groceries.length}} Groceries to Get_1</h3>
+
+   <!-- ng-bind로 출력 -->
+   <h3 class="ListTitle">
+     <span ng-bind="groceries.length"></span> Groceries to Get_2
+   </h3>
+
+   <!-- object array의 특정항목 출력 -->
+   <ol>
+     <li>{{groceries[0].item}}</li>
+   </ol>
+
+   <!-- 특정 index부터 출력하기 -->
+   <ol start="2">
+     <li ng-repeat="grocery in groceries" ng-if="$index > 0">
+     {{grocery.item}} {{$index}}
+     </li>
+   </ol>
+   <!-- ng-if= $first
+               $last
+               $middle
+               $even
+               $odd  -->
+  </div>
+
+</body>
+</html>
