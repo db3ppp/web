@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-cloak>
+	<head>
+		<title>Example</title>
+		<style>
+		[ng\:cloak], [ng-cloak], .ng-cloak {
+			display: none;
+		}
+		.bluetext {
+			color: blue;
+		}
+		.boldtext {
+			font-weight: bold;
+		}
+		.stripedblue {
+			color: #007FFF;
+			background-color: #DBE9F4;
+		}
+		.stripedbeige {
+			color: #CC0000;
+			background-color: #F5F5DC
+		}
+		</style>
+	</head>
+
+	<body>
+    <div ng-controller="eventCtrl">
+
+      <p>
+        <select ng-model="textStyling">
+          <option value="bluetext">Blue text </option>
+          <option value="boldtext">Bold text </option>
+        </select>
+      </p>
+
+      <p ng-class="textStyling"> Some Random Text </p>
+
+      <table>
+        <tr ng-repeat="item in capitals">
+          ng-class-even="'stripedblue'"
+          ng-class-odd="'stripedbeige'"
+          <td>{{item.City}}</td>
+          <td>{{item.State}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="exam5.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="CountApp" ng-controller="CountCtrl">
+<button ng-click="add()">Click!</button>
+
+<p>{{count}}</p>
+<div>
+
+<script>
+var app = angular.module('CountApp', []);
+app.controller('CountCtrl', function($scope){
+	$scope.count = 0;
+	$scope.add = function(){
+	return $scpoe.count = $scope.count + 1;
+	}
+});
+
+    </script>
+
+</body>
+</html>

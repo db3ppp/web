@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
+
+        <script src="app.js"></script>
+        <script src="hello.js"></script>
+        <script src="about.js"></script>
+    </head>
+
+    <body ng-app="routingApp">
+        <header>
+            <a href="#/hello">Hello</a>
+            <a href="#/about">About</a>
+        </header>
+
+        <!-- Place where our view will be displayed -->
+        <div ng-view>
+        </div>
+
+    </body>
+</html>
