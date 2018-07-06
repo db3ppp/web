@@ -26,7 +26,7 @@ module.exports = {
   var list = '<ul>';
   var i = 0;
   while(i < filelist.length){ //파일리스트 가져온 목록들 추가해주기 + 링크걸기
-    list = list + `<li><a href="/?id=${filelist[i]}"> ${filelist[i]}</a></li>`;
+    list = list + `<li><a href="/page/${filelist[i]}"> ${filelist[i]}</a></li>`;
     i++;
   }
   list = list + '</ul>';

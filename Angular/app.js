@@ -17,6 +17,6 @@ angular.module('routingApp', ['ngRoute'])
     })
     // Ignore code below. This is usually in seperate html files
     .run(function ($templateCache){
-        $templateCache.put('hello.html', '<h1>{{message}}!</h1>');
+        $templateCache.put('hello.html', '<h1>{{message}}</h1>');
         $templateCache.put('about.html', '<h1>About</h1><p>{{description}}</p>');
     });

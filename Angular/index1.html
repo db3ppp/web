@@ -9,7 +9,9 @@
 </head>
 
 <body>
-  <div ng-app="invoice1" ng-controller="InvoiceController as invoice"> <!--invoice1에서 생성한 컨트롤러를 invoice라는 변수에 저장-->
+  <div ng-app="invoice1" ng-controller="InvoiceController as invoice">
+    <!--invoice1이라는 module을 이 application의 main module로 사용 -->
+    <!--invoice1에서 생성한 컨트롤러를 invoice라는 변수에 넣어 저장 -->
   <b>Invoice:</b>
   <div>
     Quantity: <input type="number" min="0" ng-model="invoice.qty" required >

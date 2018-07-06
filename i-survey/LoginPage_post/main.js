@@ -46,7 +46,7 @@ var checkDocumentsQuery = function(db,id,callback){
 }
 
 //html 불러들여오기
-app.get('/loginpage', function(req,res){
+app.get('/', function(req,res){
   //console.log(__dirname); Users/kimhyewon/Desktop/Web/i-survey/LoginPage_post
   res.sendFile(path.join(__dirname + '/login.html')); //path()를 이용해서 절대경로 써주어야한다.
 });
@@ -96,6 +96,7 @@ app.post('/register', function(req,res){
           var html = fs.readFile('./result.html',function(err,html){
             html = " " + html;
             html = html.replace("<%RESULT%>", "Register Complete!");
+
             res.send(html);
           });
           db.close();
@@ -115,6 +116,6 @@ app.post('/register', function(req,res){
   });
 });
 
-app.listen(3000, ()=>{
+app.listen(3000, function(){
   console.log("server started at http://localhost:3000");
 })
