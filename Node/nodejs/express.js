@@ -1,38 +1,27 @@
 var express = require('express');
 var app = express();
-var fs = require('fs');
-var path = require('path');
-var qs = require('querystring');
 var template= require('./lib/template.js');
 var bodyParser = require('body-parser');
-var router = express.Router();
+
 var pageRouter = require('./route/page');
+var indexRouter = require('./route/index');
 
 app.use(bodyParser.urlencoded({extended :false})); //middelware사용
 app.use(express.static('./')); //static파일 사용하기
 
+
 // /page로 시작하는 페이지를 pageRouter 라는 이름의 middleware로 사용
 app.use('/page', pageRouter);
+app.use('/',indexRouter);
 
-//routing
-app.get('/', function(req,res){
-fs.readdir('./data', function(err,filelist){
 
-  var title = 'Welcome';
-  var description = "Hello,Node.js";
-
-  var list = template.list(filelist);
-  var html = template.html(title, list,
-    `
-    <h2>${title}</h2>${description}
-    <img src="/images/hello.jpg" style="width:300px; display:block; margin-top:10px;">
-    `,
-    `<a href="/page/create">create</a>`
-  );
-res.send(html);
-  });
+app.use(function(req,res,next){
+  res.status(404).send('Sorry cannot find that!');
 });
-
+app.use(function(err,req,res,next){
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
 
 app.listen(3000, function(){
   console.log('Example app listening on port 3000!');
