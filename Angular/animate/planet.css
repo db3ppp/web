@@ -1,0 +1,69 @@
+body {
+  font-family: 'Lato';
+  margin: 10px auto;
+  max-width: 800px;
+}
+
+ul {
+  padding: 0;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 5px 15px;
+  margin: 2px 0;
+  background: lightpink;
+  border-radius: 5px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 10px;
+  text-align: center;
+}
+
+h2 {
+  margin: 10px;
+}
+
+p {
+  margin-left: 10px;
+}
+
+.planet-container {
+  position: relative;
+  margin: 10px 20px;
+}
+
+.planet-view {
+  padding: 10px;
+}
+
+.planet-view.ng-animate {
+  transition: all ease 0.4s;
+  position: absolute;
+}
+
+.planet-view.ng-enter {
+  top: 200px;
+  opacity: 0;
+}
+
+.planet-view.ng-leave,
+.planet-view.ng-enter.ng-enter-active {
+  top: 0;
+  opacity: 1;
+}
+
+.planet-view.ng-leave.ng-leave-active {
+  top: -200px;
+  opacity: 0;
+}

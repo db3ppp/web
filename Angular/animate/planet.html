@@ -1,0 +1,33 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="planet.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+ <script src = 'planet.js'></script>
+</head>
+
+<body>
+<div ng-app="planetApp">
+  <script type="text/ng-template" id="atmosphere.html">
+    <h2>Name of the Planet: {{planet.name}}</h2>
+    <p>Carbon Dioxide: {{planet.carbondioxide}}</p>
+    <p>Nitrogen: {{planet.nitrogen}}</p>
+    <p>Oxygen: {{planet.oxygen}}</p>
+    <p>Hydrogen: {{planet.hydrogen}}</p>
+  </script>
+
+  <h1>Atmospheric Composition of Terrestrial Planets</h1>
+  <ul>
+    <li><a href="#!/mercury">Mercury</a></li>
+    <li><a href="#!/venus">Venus</a></li>
+    <li><a href="#!/earth">Earth</a></li>
+    <li><a href="#!/mars">Mars</a></li>
+  </ul>
+
+  <div class="planet-container">
+    <div class="planet-view" ng-view></div>
+  </div>
+</div>
+</body>
+</html>
